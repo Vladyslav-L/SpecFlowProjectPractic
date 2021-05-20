@@ -38,13 +38,53 @@ namespace SpecFlowProjectPractic
             _singUpPage.SetEmail(email);
             _singUpPage.SetPassword(password);
             _singUpPage.SetPasswordConfirm(confirmPassword);
-            _singUpPage.SetPhoneNumber(mobile);            
-        }   
+            _singUpPage.SetPhoneNumber(mobile);
+        }
 
         [When(@"I click Next button")]
         public void WhenIClickLogInButton()
         {
             _singUpPage.ClickNextButton();
-        }        
+        }
+
+        [When(@"I fill first name in first name field for Sing Up page ")]
+        public void WhenIFillFirstName(string firstName)
+        {
+            _singUpPage.SetFirstName(firstName);
+        }
+
+        [When(@"I fill last name in last name field for Sing Up page ")]
+        public void WhenIFillLastName(string lastName)
+        {
+            _singUpPage.SetLastName(lastName);
+        }
+
+        [When(@"I fill email (.*) in email field for Sing Up page ")]
+        public void WhenIFillEmail(string email)
+        {
+            _singUpPage.SetEmail(email);
+        }
+
+        [When(@"I fill password (.*) in password field for Sing Up page")]
+        public void WhenIFillPassword(string password)
+        {
+            _singUpPage.SetPassword(password);
+        }
+
+        [When(@"I fill mobile (.*) in mobile field for Sing Up page ")]
+        public void WhenIFillMobile(string mobile)
+        {
+            _singUpPage.SetPhoneNumber(mobile);
+        }
+
+        [Then(@"I fill mobile (.*) in mobile field for Sing Up page ")]
+        public void WhenIFillMobile(string mobile)
+        {
+            _singUpPage.SetPhoneNumber(mobile);
+        }
+
+
+
+
     }
 }
