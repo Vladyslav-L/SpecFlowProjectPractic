@@ -12,32 +12,31 @@ Scenario: It is possible to registration in NewBookModels with valid data
 	And I click Next button
 	Then I successfully logged in NewBookModels as created client
 
-Scenario : Check exception message for first name field if using invalid data
+Scenario: Check exception message for first name field if using invalid data
 	Given Sign up page is opened
-	When I fill first name in first name field for Sing Up page 
+	When I fill first name in first name field for Sing Up page
 	| First name |
 	|            |
 	And I click Next button
-	Then Displayed exception message for first name field for Sing Up page 
+	Then Displayed exception message for first name field for Sing Up page
 	| Message  |
 	| Required |
 
-Scenario : Check exception message for last name field if using invalid data
+Scenario: Check exception message for last name field if using invalid data
 	Given Sign up page is opened
-	When I fill last name in last name field for Sing Up page 
-	| First name |
+	When I fill last name in last name field for Sing Up page
 	| Last name |
 	|           |
 	And I click Next button
-	Then Displayed exception message for last name field for Sing Up page 
+	Then Displayed exception message for last name field for Sing Up page
 	| Message  |
 	| Required |
 
 Scenario Outline: Check exception message for email field if using invalid data
 	Given Sign up page is opened
-	When I fill email <Email> in email field for Sing Up page 
+	When I fill email <Email> in email field for Sing Up page
 	And I click Next button
-	Then Displayed exception message <Message> for email field for Sing Up page 
+	Then Displayed exception message <Message> for email field for Sing Up page
 Examples:
 	| Email   | Message       |
 	| fsdfsdf | Invalid Email |
@@ -46,9 +45,9 @@ Examples:
 
 Scenario Outline: Check exception message for password field if using invalid data
 	Given Sign up page is opened
-	When I fill password <Password> in password field for Sing Up page  
+	When I fill password <Password> in password field for Sing Up page
 	And I click Next button
-	Then Displayed exception message <Message> for password field for Sing Up page 
+	Then Displayed exception message <Message> for password field for Sing Up page
 Examples:
 	| Password | Message                 |
 	| qwe123   | Invalid password format |
@@ -59,9 +58,9 @@ Examples:
 
 Scenario Outline: Check exception message for mobile field if using invalid data
 	Given Sign up page is opened
-	When I fill mobile <Mobile> in mobile field for Sing Up page 
+	When I fill mobile <Mobile> in mobile field for Sing Up page
 	And I click Next button
-	Then Displayed exception message <Message> for mobile field for Sing Up page 
+	Then Displayed exception message <Message> for mobile field for Sing Up page
 Examples:
 	| Mobile | Message              |
 	| 456.6  | Invalid phone format |
