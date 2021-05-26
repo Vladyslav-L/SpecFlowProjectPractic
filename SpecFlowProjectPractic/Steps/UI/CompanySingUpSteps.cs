@@ -16,6 +16,7 @@ namespace SpecFlowProjectPractic
             _scenarioContext = scenarioContext;
             _webDriver = _scenarioContext.Get<IWebDriver>(Context.WebDriver);
             _companySignUpPage = new CompanySignUpPage(_webDriver);
+
         }
 
         [Then(@"I successfully logged in NewBookModels as created client")]

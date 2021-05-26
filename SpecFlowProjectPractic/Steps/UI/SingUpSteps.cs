@@ -47,16 +47,16 @@ namespace SpecFlowProjectPractic
             _singUpPage.ClickNextButton();
         }
 
-        [When(@"I fill first name in first name field for Sing Up page")]
-        public void WhenIFillFirstName(string firstName)
-        {
-            _singUpPage.SetFirstName(firstName);
+        [When(@"I fill empty first name in first name field for Sing Up page")]
+        public void WhenIFillFirstName()
+        {        
+            _singUpPage.SetFirstName("");            
         }
 
-        [When(@"I fill last name in last name field for Sing Up page")]
-        public void WhenIFillLastName(string lastName)
+        [When(@"I fill empty last name in last name field for Sing Up page")]
+        public void WhenIFillLastName()
         {
-            _singUpPage.SetLastName(lastName);
+            _singUpPage.SetLastName("");
         }
 
         [When(@"I fill email (.*) in email field for Sing Up page")]
@@ -77,36 +77,37 @@ namespace SpecFlowProjectPractic
             _singUpPage.SetPhoneNumber(mobile);
         }
 
-        [Then(@"Displayed exception message for first name field for Sing Up page")]
+        [Then(@"Displayed exception message: (.*) for first name field for Sing Up page")]
         public void DisplayedExceptionMessageForFirstNameFieldSingUpPage(string message)
         {
             Assert.AreEqual(message,_singUpPage.GetExceptionMessageRequiredFirstName());
         }
 
-        [Then(@"Displayed exception message for last name field for Sing Up page")]
+        [Then(@"Displayed exception message: (.*) for last name field for Sing Up page")]
         public void DisplayedExceptionMessageForLastNameFieldSingUpPage(string message)
         {
             Assert.AreEqual(message,_singUpPage.GetExceptionMessageRequiredLastName());
         }
 
         [Then(@"Displayed exception message (.*) for password field for Sing Up page")]
-        public void DisplayedExceptionMessageForPasswordFieldSingUpPage(Table table)
+        public void DisplayedExceptionMessageForPasswordFieldSingUpPage(string message)
         {
-            var message = table.Rows[0]["Message"];
+            //var message = table.Rows[0]["Message"];
             Assert.AreEqual(message, _singUpPage.GetExceptionMessageInvalidPassword());
         }
 
         [Then(@"Displayed exception message (.*) for email field for Sing Up page")]
-        public void DisplayedExceptionMessageForEmailFieldSingUpPage(Table table)
+        public void DisplayedExceptionMessageForEmailFieldSingUpPage(string message)
         {
-            var message = table.Rows[0]["Message"];
+            //var message = table.Rows[0]["Message"];
             Assert.AreEqual(message, _singUpPage.GetExceptionMessageRequiredEmail());
         }
 
         [Then(@"Displayed exception message (.*) for mobile field for Sing Up page")]
-        public void DisplayedExceptionMessageForMobileFieldSingUpPage(Table table)
+        public void DisplayedExceptionMessageForMobileFieldSingUpPage(string message)
         {
-            var message = table.Rows[0]["Message"];
+            //Table table
+            //var message = table.Rows[0]["Message"];
             Assert.AreEqual(message, _singUpPage.GetExceptionMessageInvalidPhoneFormat());
         }
     }

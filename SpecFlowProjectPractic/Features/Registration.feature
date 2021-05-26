@@ -7,30 +7,24 @@ Feature: Registration
 Scenario: It is possible to registration in NewBookModels with valid data
 	Given Sign up page is opened
 	When I registration user using data
-	| First name | Last name | Email                            | Password    | Confirm password | Mobile  |
-	| Vitalik    | Petrenko  | VitalikPetrenko1454444@gmail.com | QWE147asd!- | QWE147asd!-      | 7788445 |
+	| First name | Last name | Email                                  | Password    | Confirm password | Mobile  |
+	| Vitalik    | Petrenko  | VitalikPetrenko1454888466644@gmail.com | QWE147asd!- | QWE147asd!-      | 7788445 |
 	And I click Next button
 	Then I successfully logged in NewBookModels as created client
 
 Scenario: Check exception message for first name field if using invalid data
 	Given Sign up page is opened
-	When I fill first name in first name field for Sing Up page
-	| First name |
-	|            |
+	When I fill empty first name in first name field for Sing Up page	
 	And I click Next button
-	Then Displayed exception message for first name field for Sing Up page
-	| Message  |
-	| Required |
+	Then Displayed exception message: Required for first name field for Sing Up page
+	
 
 Scenario: Check exception message for last name field if using invalid data
 	Given Sign up page is opened
-	When I fill last name in last name field for Sing Up page
-	| Last name |
-	|           |
+	When I fill empty last name in last name field for Sing Up page	
 	And I click Next button
-	Then Displayed exception message for last name field for Sing Up page
-	| Message  |
-	| Required |
+	Then Displayed exception message: Required for last name field for Sing Up page
+	
 
 Scenario Outline: Check exception message for email field if using invalid data
 	Given Sign up page is opened

@@ -121,7 +121,7 @@ namespace SpecFlowProjectPractic
            _webDriver.FindElement(_signupCompanyFormButton).Click();
 
         public string GetExceptionMessageRequiredFirstName() =>
-            _webDriver.FindElement(_ExceptionMessageForNullLastName).Text;
+            _webDriver.FindElement(_ExceptionMessageForNullFirstName).Text;
 
         public string GetExceptionMessageRequiredLastName() =>
            _webDriver.FindElement(_ExceptionMessageForNullLastName).Text;

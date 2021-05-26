@@ -120,7 +120,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table8.AddRow(new string[] {
                             "Vitalik",
                             "Petrenko",
-                            "VitalikPetrenko1454444@gmail.com",
+                            "VitalikPetrenko1454888466644@gmail.com",
                             "QWE147asd!-",
                             "QWE147asd!-",
                             "7788445"});
@@ -167,22 +167,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 16
  testRunner.Given("Sign up page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
-                            "First name"});
-                table9.AddRow(new string[] {
-                            ""});
 #line 17
- testRunner.When("I fill first name in first name field for Sing Up page", ((string)(null)), table9, "When ");
+ testRunner.When("I fill empty first name in first name field for Sing Up page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 20
+#line 18
  testRunner.And("I click Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Message"});
-                table10.AddRow(new string[] {
-                            "Required"});
-#line 21
- testRunner.Then("Displayed exception message for first name field for Sing Up page", ((string)(null)), table10, "Then ");
+#line 19
+ testRunner.Then("Displayed exception message: Required for first name field for Sing Up page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -195,7 +187,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check exception message for last name field if using invalid data", null, tagsOfScenario, argumentsOfScenario);
-#line 25
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -215,25 +207,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 26
+#line 23
  testRunner.Given("Sign up page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Last name"});
-                table11.AddRow(new string[] {
-                            ""});
-#line 27
- testRunner.When("I fill last name in last name field for Sing Up page", ((string)(null)), table11, "When ");
+#line 24
+ testRunner.When("I fill empty last name in last name field for Sing Up page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 30
+#line 25
  testRunner.And("I click Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Message"});
-                table12.AddRow(new string[] {
-                            "Required"});
-#line 31
- testRunner.Then("Displayed exception message for last name field for Sing Up page", ((string)(null)), table12, "Then ");
+#line 26
+ testRunner.Then("Displayed exception message: Required for last name field for Sing Up page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -251,7 +235,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Email", email);
             argumentsOfScenario.Add("Message", message);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check exception message for email field if using invalid data", null, tagsOfScenario, argumentsOfScenario);
-#line 35
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -271,16 +255,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 36
+#line 30
  testRunner.Given("Sign up page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 37
+#line 31
  testRunner.When(string.Format("I fill email {0} in email field for Sing Up page", email), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 38
+#line 32
  testRunner.And("I click Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 39
+#line 33
  testRunner.Then(string.Format("Displayed exception message {0} for email field for Sing Up page", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -301,7 +285,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Password", password);
             argumentsOfScenario.Add("Message", message);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check exception message for password field if using invalid data", null, tagsOfScenario, argumentsOfScenario);
-#line 46
+#line 40
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -321,16 +305,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 47
+#line 41
  testRunner.Given("Sign up page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 48
+#line 42
  testRunner.When(string.Format("I fill password {0} in password field for Sing Up page", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 49
+#line 43
  testRunner.And("I click Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 50
+#line 44
  testRunner.Then(string.Format("Displayed exception message {0} for password field for Sing Up page", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -349,7 +333,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Mobile", mobile);
             argumentsOfScenario.Add("Message", message);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check exception message for mobile field if using invalid data", null, tagsOfScenario, argumentsOfScenario);
-#line 59
+#line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -369,16 +353,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 60
+#line 54
  testRunner.Given("Sign up page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 61
+#line 55
  testRunner.When(string.Format("I fill mobile {0} in mobile field for Sing Up page", mobile), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 62
+#line 56
  testRunner.And("I click Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 63
+#line 57
  testRunner.Then(string.Format("Displayed exception message {0} for mobile field for Sing Up page", message), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
