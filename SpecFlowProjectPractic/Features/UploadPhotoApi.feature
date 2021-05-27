@@ -1,9 +1,8 @@
-﻿Feature: UploadPhotoApi
-	Simple calculator for adding two numbers
+﻿@UploadPhoto @Api
+Feature: UploadPhotoApi	
 
-@mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+Scenario: It is posible to upload client profile photo if send Api request POST 
+	Given Client is created		
+	When I send the request POST to route /images/upload/ with valid body
+	And I send the request PATCH to route /client/self/ with valid body
+	Then Client profile photo is uploaded

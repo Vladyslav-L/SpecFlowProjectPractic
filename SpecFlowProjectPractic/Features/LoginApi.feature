@@ -1,9 +1,7 @@
-﻿Feature: LoginApi
-	Simple calculator for adding two numbers
+﻿@Login @Api
+Feature: LoginApi	
 
-@mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+Scenario: It is posible to login in NewBookModels if send Api request POST 
+	Given Client is created	
+	When  I send the request POST to route /authorization with valid body	
+	Then I successfully logged in NewBookModels as created client

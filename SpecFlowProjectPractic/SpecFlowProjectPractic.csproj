@@ -53,10 +53,25 @@
     <Compile Update="Features\AccountSettings.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Update="Features\ChangeGeneralInformation.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Features\ChangePasswordApi.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Update="Features\Login.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Update="Features\LoginApi.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Update="Features\Registration.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Features\RegistrationApi.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Features\UploadPhotoApi.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
   </ItemGroup>
@@ -66,8 +81,13 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AccountSettings.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\ChangeGeneralInformation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangeGeneralInformation.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\ChangePasswordApi.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangePasswordApi.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\Login.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -75,6 +95,7 @@
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\LoginApi.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoginApi.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\Registration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -82,9 +103,11 @@
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\RegistrationApi.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RegistrationApi.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\UploadPhotoApi.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UploadPhotoApi.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
   </ItemGroup>
 

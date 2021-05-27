@@ -110,14 +110,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.Given("Sign up page is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "First name",
                             "Last name",
                             "Email",
                             "Password",
                             "Confirm password",
                             "Mobile"});
-                table8.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "Vitalik",
                             "Petrenko",
                             "VitalikPetrenko1454888466644@gmail.com",
@@ -125,7 +125,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "QWE147asd!-",
                             "7788445"});
 #line 9
- testRunner.When("I registration user using data", ((string)(null)), table8, "When ");
+ testRunner.When("I registration user using data", ((string)(null)), table1, "When ");
 #line hidden
 #line 12
  testRunner.And("I click Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

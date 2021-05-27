@@ -1,8 +1,6 @@
-﻿Feature: RegistrationApi
-	
+﻿@Registration @Api
+Feature: RegistrationApi	
 
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+Scenario: It is posible to create client if send Api request POST 
+	When I send the request POST to route /registration with valid body	
+	Then I successfully logged in NewBookModels as created client

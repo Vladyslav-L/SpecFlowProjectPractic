@@ -1,9 +1,7 @@
-﻿Feature: ChangePasswordApi
-	Simple calculator for adding two numbers
+﻿@ChangePassword @Api
+Feature: ChangePasswordApi	
 
-@mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+Scenario: It is posible to change client password if send Api request POST 
+	Given Client is created		
+	When  I send the request POST to route /password/change/ with valid body and authorization token
+	Then Client password is changed

@@ -19,7 +19,7 @@ namespace SpecFlowProjectPractic
             _scenarioContext = scenarioContext;
         }
 
-        [BeforeScenario("ui")]
+        [BeforeScenario]
         public void BeforeScenario()
         {
             new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
@@ -33,7 +33,7 @@ namespace SpecFlowProjectPractic
         [BeforeStep]
         public void BeforeStep()
         {
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             var driver = _scenarioContext.Get<IWebDriver>(Context.WebDriver);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(7);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(60);
