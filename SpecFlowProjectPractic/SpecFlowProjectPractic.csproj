@@ -66,13 +66,25 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AccountSettings.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\ChangePasswordApi.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\Login.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Login.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\LoginApi.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\Registration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Registration.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\RegistrationApi.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UploadPhotoApi.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
     </SpecFlowFeatureFiles>
   </ItemGroup>
 
