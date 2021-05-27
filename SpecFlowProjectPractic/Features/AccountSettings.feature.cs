@@ -120,16 +120,17 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I click edit button for general information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
- testRunner.And("I fill first name in first name field for Account Settings page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I fill first name Vitalik in first name field for Account Settings page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
- testRunner.And("I fill last name in last name field for Account Settings page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I fill last name Petrenko in last name field for Account Settings page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
- testRunner.And("I fill industry in industry field for Account Settings page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I fill industry industry in industry field for Account Settings page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
- testRunner.And("I fill company location in company location field for Account Settings page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I fill company location 1454 South County Trail, East Greenwich in company locati" +
+                        "on field for Account Settings page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
  testRunner.And("I click company location button for Account Settings page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

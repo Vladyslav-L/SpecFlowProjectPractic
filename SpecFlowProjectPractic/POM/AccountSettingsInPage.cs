@@ -43,8 +43,8 @@ namespace SpecFlowProjectPractic
         private static By _stripeField = By.CssSelector("input[class='StripeField--fake']");
         private static By _updateErrorMessage = By.XPath("//span[contains(text(),'Update card info unexpected error')]");
         private static By _phoneNumber = By.XPath("//input[contains(@placeholder ,'555.222.5555')]");
-        private static By _phoneNumberField = By.XPath("" +
-            "//span[contains(@class,'font-weight-bold')]//../../div[contains(text(),'Phone Number')]");
+        private static By _phoneNumberField = By.XPath("//span[contains(@class,'font-weight-bold')]//../../div[contains(text(),'Phone Number')]");
+        private static By _currentEmailField = By.XPath("//div[contains(text(),' Current email: ')]");
             
         public AccountSettingsInPage(IWebDriver webDriver)
         {
@@ -59,12 +59,14 @@ namespace SpecFlowProjectPractic
 
         public AccountSettingsInPage SetFirstName(string firstName)
         {
-            _webDriver.FindElement(_firstNameField).SendKeys(firstName);
+            _webDriver.FindElement(_firstNameField).Clear();
+            _webDriver.FindElement(_firstNameField).SendKeys(firstName);            
             return this;
         }
 
         public AccountSettingsInPage SetLastName(string lastName)
         {
+            _webDriver.FindElement(_lastNameField).Clear(); 
             _webDriver.FindElement(_lastNameField).SendKeys(lastName);
             return this;
         }
@@ -173,6 +175,10 @@ namespace SpecFlowProjectPractic
 
         public string GetUpdateNumber() =>
            _webDriver.FindElement(_phoneNumberField).Text;
+        public string GetUpdateEmail() =>
+           _webDriver.FindElement(_currentEmailField).Text;
+         public string GetUpdateHolderName(string name) =>
+           _webDriver.FindElement(By.XPath($"//div[contains(text(),'{name}')]")).Text;
 
         public void ClickSaveCard() =>
             _webDriver.FindElement(_saveButton).Click();

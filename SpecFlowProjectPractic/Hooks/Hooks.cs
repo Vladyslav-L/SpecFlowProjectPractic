@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
 using TechTalk.SpecFlow;
@@ -19,27 +20,27 @@ namespace SpecFlowProjectPractic
             _scenarioContext = scenarioContext;
         }
 
-        [BeforeScenario]
+        [BeforeScenario("ui")]
         public void BeforeScenario()
         {
             new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
-            var driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(60);
-            _scenarioContext.Add(Context.WebDriver, driver);
+            var webDriver = new ChromeDriver();
+            webDriver.Manage().Window.Maximize();
+            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+            webDriver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(60);
+            _scenarioContext.Add(Context.WebDriver, webDriver);
         }
 
-        [BeforeStep]
+        [BeforeStep("AccountSettings")]
         public void BeforeStep()
         {
-            Thread.Sleep(500);
-            var driver = _scenarioContext.Get<IWebDriver>(Context.WebDriver);
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(7);
-            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(60);
+            Thread.Sleep(1000);
+            var webDriver = _scenarioContext.Get<IWebDriver>(Context.WebDriver);
+            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(7);
+            webDriver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(60);
         }
 
-        [AfterScenario]
+        [AfterScenario("ui")]
         public void AfterScenario()
         {
             _scenarioContext.Get<IWebDriver>(Context.WebDriver).Quit();

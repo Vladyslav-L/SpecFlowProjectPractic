@@ -15,25 +15,13 @@ namespace SpecFlowProjectPractic.Steps.UI
     {
         private readonly ScenarioContext _scenarioContext;
         private readonly IWebDriver _webDriver;
-        private readonly AccountSettingsInPage _accountSettingsInPage;
-        private readonly SingInPage _singInPage;
+        private readonly AccountSettingsInPage _accountSettingsInPage;        
 
         public AccountSettingsSteps(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
             _webDriver = _scenarioContext.Get<IWebDriver>(Context.WebDriver);
-            _accountSettingsInPage = new AccountSettingsInPage(_webDriver);           
-            _singInPage = new SingInPage(_webDriver);
-        }
-
-        [Given(@"Client is logged")]
-        public void ThenClient()
-        {
-            _singInPage.GoToSingInPage();
-            var user = _scenarioContext.Get<ClientAuthModel>(Context.User);
-            _singInPage.SetEmail(user.User.Email);
-            _singInPage.SetPassword(Constants.Password);
-            _singInPage.ClickSingUp();
+            _accountSettingsInPage = new AccountSettingsInPage(_webDriver);
         }
 
         [When(@"Account Settings page is opened")]
@@ -66,28 +54,28 @@ namespace SpecFlowProjectPractic.Steps.UI
             _accountSettingsInPage.ClickEditSwitcherPhoneNumber();
         }
 
-        [When(@"I fill first name in first name field for Account Settings page")]
-        public void WhenIFillFirstNameInFirstNameFieldForAccountSettingsPage()
+        [When(@"I fill first name (.*) in first name field for Account Settings page")]
+        public void WhenIFillFirstNameInFirstNameFieldForAccountSettingsPage(string firstName)
         {
-            _accountSettingsInPage.SetFirstName("");
+            _accountSettingsInPage.SetFirstName(firstName);
         }
 
-        [When(@"I fill last name in last name field for Account Settings page")]
-        public void WhenIFillLastNameInLastNameFieldForAccountSettingsPage()
+        [When(@"I fill last name (.*) in last name field for Account Settings page")]
+        public void WhenIFillLastNameInLastNameFieldForAccountSettingsPage(string lastName)
         {
-            _accountSettingsInPage.SetLastName("");
+            _accountSettingsInPage.SetLastName(lastName);
         }
 
-        [When(@"I fill industry in industry field for Account Settings page")]
-        public void WhenIFillIndustryInIndustryFieldForAccountSettingsPage()
+        [When(@"I fill industry (.*) in industry field for Account Settings page")]
+        public void WhenIFillIndustryInIndustryFieldForAccountSettingsPage(string industry)
         {
-            _accountSettingsInPage.SetIndustry("");
+            _accountSettingsInPage.SetIndustry(industry);
         }
 
-        [When(@"I fill company location in company location field for Account Settings page")]
-        public void WhenIFillConpanyLocationInCompanyLocationFieldForAccountSettingsPage()
+        [When(@"I fill company location (.*) in company location field for Account Settings page")]
+        public void WhenIFillConpanyLocationInCompanyLocationFieldForAccountSettingsPage(string companyLocation)
         {
-            _accountSettingsInPage.SetCompanyLocation("");
+            _accountSettingsInPage.SetCompanyLocation(companyLocation);
         }
 
         [When(@"I click company location button for Account Settings page")]
@@ -104,7 +92,7 @@ namespace SpecFlowProjectPractic.Steps.UI
 
         [When(@"I fill old password in old password field for Account Settings page")]
         public void WhenIFillOldPasswordInOldPasswordFiledForAccountSettingsPage()
-        {            
+        {
             _accountSettingsInPage.SetCurrentPassword("");
         }
 
@@ -129,13 +117,13 @@ namespace SpecFlowProjectPractic.Steps.UI
         [When(@"I fill password in password field for Account Settings page")]
         public void WhenIFillPasswordInPasswordFieldForAccountSettingsPage()
         {
-            _accountSettingsInPage.SetPassword("");
+            _accountSettingsInPage.SetPassword(Constants.Password);
         }
 
         [When(@"I fill new email in new email field for Account Settings page")]
         public void WhenIFillNewEmailInNewEmailFieldForAccountSettingsPage()
         {
-            _accountSettingsInPage.SetEmail("");
+            _accountSettingsInPage.SetEmail(UniqData.Email);
         }
 
         [When(@"I click Save Changes button for email in Account Settings page")]
@@ -159,8 +147,21 @@ namespace SpecFlowProjectPractic.Steps.UI
         [Then(@"Phone number is changed")]
         public void ThenPhoneNumberIsChanged()
         {
-            Assert.AreEqual("Phone Number: 111.111.1111", _accountSettingsInPage.GetUpdateNumber());            
+            Assert.AreEqual("Phone Number: 111.111.1111", _accountSettingsInPage.GetUpdateNumber());
         }
+
+        [Then(@"Email is changed")]
+        public void ThenEmailIsChanged()
+        {
+            Assert.AreEqual($"Current email: {UniqData.Email}", _accountSettingsInPage.GetUpdateEmail());
+        }
+
+        [Then(@"Account settings is changed")]
+        public void ThenAccountSettingsIsChanged()
+        {           
+            Assert.AreEqual($"{Constants.FirstName} {Constants.LastName}",_accountSettingsInPage.GetUpdateHolderName(Constants.FirstName));
+        }
+
         //[When(@"I fill first name in first name field for Account Settings page")]
         //public void WhenIClickEditButtonForPhoneNumber()
         //{

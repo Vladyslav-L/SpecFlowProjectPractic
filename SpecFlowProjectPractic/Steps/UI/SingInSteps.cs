@@ -18,6 +18,16 @@ namespace SpecFlowProjectPractic
             _singInPage = new SingInPage(_webDriver);
         }
 
+        [Given(@"Client is logged")]
+        public void ThenClient()
+        {
+            _singInPage.GoToSingInPage();
+            var user = _scenarioContext.Get<ClientAuthModel>(Context.User);
+            _singInPage.SetEmail(user.User.Email);
+            _singInPage.SetPassword(Constants.Password);
+            _singInPage.ClickSingUp();
+        }
+
         [Given(@"Sign in page is opened")]
         public void GivenSignInPageIsOpened()
         {
