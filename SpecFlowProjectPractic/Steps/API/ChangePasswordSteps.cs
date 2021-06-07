@@ -29,9 +29,16 @@ namespace SpecFlowProjectPractic.Steps.API
         }
 
         [Then(@"Client password is changed")]
-        public void ClientProfilePhotoIsUploaded()
+        public void ThenClientPasswordIsChanged()
         {
             Assert.AreEqual(_user.TokenData.Token, _changedPassword);
         }
+
+        [Then(@"Password is changed")]
+        public void ThenPasswordIsChanged()
+        {
+            Assert.AreEqual(_user.TokenData.Token, _changedPassword);
+        }
+
     }
 }

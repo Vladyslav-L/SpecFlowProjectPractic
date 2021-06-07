@@ -152,7 +152,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 11
  testRunner.When("I send the request PATCH to route /client/self/ with valid body and authorization" +
-                        " token", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                        " token for change last name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
  testRunner.Then("Client last name is changed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -234,7 +234,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 21
  testRunner.When("I send the request PATCH to route /client/profile/ with valid body and authorizat" +
-                        "ion token", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                        "ion token for change industry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
  testRunner.Then("Client industry is changed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
